@@ -36,3 +36,4 @@ build/
 src/main/resources/application-dev.properties
 src/main/resources/application.properties
 src/main/resources/api.properties
+src/main/resources/project-media-tracker-firebase-adminsdk-2wn5h-e3ec6e55fb.json
