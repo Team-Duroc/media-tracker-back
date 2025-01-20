@@ -66,8 +66,8 @@ class FilmControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/mediatracker/films/search/{query}", query))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.results[0].title").value("movie"))
-                .andExpect(jsonPath("$.results[1].title").value("movie 2"));
+                .andExpect(jsonPath("$[0].title").value("movie"))
+                .andExpect(jsonPath("$[1].title").value("movie 2"));
 
         verify(filmServiceImplementation).getFilmSearchResults(query);
     }
